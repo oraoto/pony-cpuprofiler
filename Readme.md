@@ -17,7 +17,7 @@ actor Main
     Profiler.stop()
 ```
 
-Compile and run your program to get the profile. Then visualize the data With [pprof](https://github.com/google/pprof).
+Compile and run your program to get the profile. Then visualize the profile with [pprof](https://github.com/google/pprof).
 
 Example output:
 
@@ -56,4 +56,9 @@ Total: 235 samples
 
 And graphs:
 
-![Counter](./examples/counter/counter.svg)
+```
+$ pprof --svg ./counter counter.profile > counter.svg
+```
+
+
+<img src="/examples/counter/counter.svg" width="2048" height="800" style="max-width:100%;">
